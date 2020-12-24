@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Add Products SuiteApp Test Report</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Add Products SuiteApp report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Nov 6, 2020 05:38:42 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='95%'><span class='strong'>19</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='5%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing Add Products Suite App</span>
+						<span class='test-time'>Nov 6, 2020 05:38:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 50s+36ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Test scenario to verify the alert when we do not select the vendor</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">user_login_to_Tvarana_Dev_Production_account_in_Netsuite</span>
+				<div class='pre'>Login Successful in Netsuite</div>
+			
+		</li>
+		<li test-id='4' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">navigate_to_Purchase_order_page</span>
+				<div class='pre'>Navigated to Purchase order page</div>
+			
+		</li>
+		<li test-id='5' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">verify_the_alert</span>
+				<div class='pre'>Alert verified successfully</div>
+			
+		</li>
+		<li test-id='6' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">close_the_browser</span>
+				<div class='pre'>Closed the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing Add Products Suite App</span>
+						<span class='test-time'>Nov 6, 2020 05:39:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='8' status='pass'>
+	<span class='duration right label'>0h 1m 50s+915ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Test scenario to verify the items added in the item sublist</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='9' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">user_login_to_Tvarana_Dev_Production_account_in_Netsuite</span>
+				<div class='pre'>Login Successful in Netsuite</div>
+			
+		</li>
+		<li test-id='10' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">navigate_to_Purchase_order_page</span>
+				<div class='pre'>Navigated to Purchase order page</div>
+			
+		</li>
+		<li test-id='11' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Select vendor, add items using Add products & verify</span>
+				<div class='pre'>Test Assembly Item added successfully</div>
+				<div class='pre'>Apple Pie,Assembly 1 added successfully</div>
+				<div class='pre'>Apple Pie,Assembly 1 added successfully</div>
+				<div class='pre'>test for add products added successfully</div>
+				<div class='pre'>Empty Bottle : MAT_III added successfully</div>
+			
+		</li>
+		<li test-id='12' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">close_the_browser</span>
+				<div class='pre'>Closed the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing Add Products Suite App</span>
+						<span class='test-time'>Nov 6, 2020 05:41:24 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='14' status='fail'>
+	<span class='duration right label'>0h 1m 1s+15ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Test scenario to verify the item filters</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='15' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">user_login_to_Tvarana_Dev_Production_account_in_Netsuite</span>
+				<div class='pre'>Login Successful in Netsuite</div>
+			
+		</li>
+		<li test-id='16' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">navigate_to_Purchase_order_page</span>
+				<div class='pre'>Navigated to Purchase order page</div>
+			
+		</li>
+		<li test-id='17' class='node then fail' status='fail'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">verify_the_items_in_the_Click_to_Add_list_based_on_filters_using_excel_data_at</span>
+				<div class='pre'>Items are not displayed correctly in the Click to add list after applying the following filters:
+Class = Class-1, Department = Accounts, Location = NULL</div>
+			
+		</li>
+		<li test-id='18' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">close_the_browser</span>
+				<div class='pre'>Closed the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing Add Products Suite App</span>
+						<span class='test-time'>Nov 6, 2020 05:42:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='20' status='pass'>
+	<span class='duration right label'>0h 0m 50s+751ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Test scenario to verify the Search functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='21' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">user_login_to_Tvarana_Dev_Production_account_in_Netsuite</span>
+				<div class='pre'>Login Successful in Netsuite</div>
+			
+		</li>
+		<li test-id='22' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">navigate_to_Purchase_order_page</span>
+				<div class='pre'>Navigated to Purchase order page</div>
+			
+		</li>
+		<li test-id='23' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">verify_the_search_results_in_the_Click_to_Add_list_using_excel_data_at</span>
+				<div class='pre'>Item results in the Click to Add list are displayed correctly</div>
+			
+		</li>
+		<li test-id='24' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">close_the_browser</span>
+				<div class='pre'>Closed the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing Add Products Suite App</span>
+						<span class='test-time'>Nov 6, 2020 05:43:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='26' status='pass'>
+	<span class='duration right label'>0h 1m 8s+20ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Test scenario to verify the pop up when we add non-matrix item with matrix item exist in the Current selection list and vice versa</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='27' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">user_login_to_Tvarana_Dev_Production_account_in_Netsuite</span>
+				<div class='pre'>Login Successful in Netsuite</div>
+			
+		</li>
+		<li test-id='28' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">navigate_to_Purchase_order_page</span>
+				<div class='pre'>Navigated to Purchase order page</div>
+			
+		</li>
+		<li test-id='29' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">verify_the_popup_after_item_addition_using_excel_data_at</span>
+				<div class='pre'>Alert occured: The item you are trying to add is a non-matrix item, which will clear all the current selected Matrix item related child items</div>
+				<div class='pre'>Alert occured: The item you are trying to add is a matrix item, which will clear all the current selected items</div>
+			
+		</li>
+		<li test-id='30' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">close_the_browser</span>
+				<div class='pre'>Closed the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>5</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>5</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>20</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 6, 2020 05:38:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 6, 2020 05:44:24 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 5m 41s+380ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 4,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 1,
+				
+				passGrandChild: 19,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 1,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

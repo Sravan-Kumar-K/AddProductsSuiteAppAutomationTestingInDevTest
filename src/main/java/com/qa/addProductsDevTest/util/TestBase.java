@@ -7,6 +7,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -59,9 +60,17 @@ public class TestBase extends ExtentReportListener{
 		new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
+	public static void eleAvailability(WebDriver driver, WebElement element, int time) {
+		new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public static void eleClickable(WebDriver driver, WebElement element, int time) {
+		new WebDriverWait(driver, time).until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
 	public static void eleClickable(WebDriver driver, By locator, int time) {
 		new WebDriverWait(driver, time).until(ExpectedConditions.elementToBeClickable(locator));
-	}	
+	}
 	
 	public java.lang.String[][] ConvertDataTableToArray(DataTable addProductsData) {
 		// TODO Auto-generated method stub

@@ -23,7 +23,7 @@ public class POCreationPage extends TestBase{
 	@FindBy(xpath = "//input[@id='custpage_addmultiple']")
 	WebElement addProductsBtn;
 	
-	@FindBy(xpath = "//input[@id='inpt_entity2']")
+	@FindBy(xpath = "//input[@name='inpt_entity']")
 	WebElement vendorDropdown;
 	
 	@FindBy(xpath = "//div[@class='dropdownDiv']//div")
@@ -56,19 +56,19 @@ public class POCreationPage extends TestBase{
 	@FindBy(xpath = "//div[@class='uir_filters_header']")
 	WebElement filtersHeader;
 	
-	@FindBy(xpath = "//input[@id='inpt_Item_CLASS1']")
+	@FindBy(xpath = "//input[@name='inpt_Item_CLASS']")
 	WebElement classDropdown;
 	
 	@FindBy(xpath = "//span[@id='Item_CLASS_fs_lbl']//a[@class='smalltextnolink']")
 	WebElement classLabel;
 	
-	@FindBy(xpath = "//input[@id='inpt_Item_DEPARTMENT2']")
+	@FindBy(xpath = "//input[@name='inpt_Item_DEPARTMENT']")
 	WebElement departmentDropdown;
 	
 	@FindBy(xpath = "//span[@id='Item_DEPARTMENT_fs_lbl']//a[@class='smalltextnolink']")
 	WebElement departmentLabel;
 	
-	@FindBy(xpath = "//input[@id='inpt_Item_LOCATION3']")
+	@FindBy(xpath = "//input[@name='inpt_Item_LOCATION']")
 	WebElement locationDropdown;
 	
 	@FindBy(xpath = "//span[@id='Item_LOCATION_fs_lbl']//a[@class='smalltextnolink']")
@@ -168,11 +168,11 @@ public class POCreationPage extends TestBase{
 	public List<String> getItemsWithFilterInNS(String classFilter, String department, String location) throws InterruptedException {
 		
 		// Navigate to Items list
-		eleAvailability(driver, By.xpath("//span[text()='Lists']"), 10);
+		eleAvailability(driver, listsLink, 10);
 		action.moveToElement(listsLink).build().perform();
-		eleAvailability(driver, By.xpath("//span[text()='Accounting']"), 10); // Explicit Wait
+		eleAvailability(driver, accountingLink, 10); // Explicit Wait
 		action.moveToElement(accountingLink).build().perform();
-		eleAvailability(driver, By.xpath("//span[text()='Items']"), 10); // Explicit Wait
+		eleAvailability(driver, itemsLink, 10); // Explicit Wait
 		action.keyDown(Keys.CONTROL).click(itemsLink).keyUp(Keys.CONTROL).build().perform();
 		
 		List<String> itemsAfterFilterInNS = new ArrayList<>();

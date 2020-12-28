@@ -32,9 +32,8 @@ public class ITestListenerImpl extends ExtentReportListener implements ITestList
 		extent.flush();
 		System.out.println("generated report");
 		try {
-			sendEmail("abhishek.dutta@tvarana.com");
+			sendEmail("sravan.k@tvarana.com");
 		} catch (EmailException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -78,7 +77,7 @@ public class ITestListenerImpl extends ExtentReportListener implements ITestList
 		  email.addTo(receipient);
 		  email.setFrom("sravan.k@tvarana.com");
 		  email.setSubject("Add Products Test Report");
-		  email.setMsg("Hey, Here is the Add Products Suite app automation test report, please find the attachment below");
+		  email.setMsg("Hey, Automation testing for Add Products SuiteApp is completed. Please find the test report attached below");
 
 		  // add the attachment
 		  email.attach(attachment);
